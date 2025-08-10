@@ -4,7 +4,7 @@ import shutil
 import sys
 
 try:
-    import fitz  # PyMuPDF for PDF rendering and text extraction
+    import fitz  # type: ignore # PyMuPDF for PDF rendering and text extraction
 except ImportError:
     fitz = None
 

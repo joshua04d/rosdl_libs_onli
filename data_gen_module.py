@@ -5,7 +5,7 @@ import numpy as np
 import random
 import string
 from datetime import datetime, timedelta
-from faker import Faker
+from faker import Faker # type: ignore
 
 fake = Faker('en_IN')
 
