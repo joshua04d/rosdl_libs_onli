@@ -440,6 +440,15 @@ def main_menu():
             sys.exit(0)
         else:
             print("Invalid choice. Please try again.")
+    def main_cli(args):
+        import argparse
+        parser = argparse.ArgumentParser(description="Generate synthetic data")
+        parser.add_argument("--rows", type=int, default=100, help="Number of rows to generate")
+        parser.add_argument("--output", required=True, help="Output CSV file")
+        opts = parser.parse_args(args)
+    
+        # TODO: replace with your existing data generation call
+        print(f"Generating {opts.rows} rows → {opts.output}")
 
 if __name__ == "__main__":
     try:

@@ -176,5 +176,16 @@ def interactive_cli():
         else:
             print("\n[Warning] Invalid choice. Please enter a number from 1 to 5.")
 
+    def main_cli(args):
+        import argparse
+        parser = argparse.ArgumentParser(description="Image processing tools")
+        parser.add_argument("--input", required=True, help="Input image file")
+        parser.add_argument("--output", required=True, help="Output image file")
+        parser.add_argument("--operation", required=True, help="Operation (resize, crop, etc.)")
+        opts = parser.parse_args(args)
+    
+        # TODO: replace with your existing image tool logic
+        print(f"Processing {opts.input} → {opts.output} (operation={opts.operation})")
+
 if __name__ == "__main__":
     interactive_cli()

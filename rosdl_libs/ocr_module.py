@@ -61,5 +61,16 @@ def main():
 
     print(f"⏱ Processed in {elapsed:.2f} seconds")
 
+    def main_cli(args):
+        import argparse
+        parser = argparse.ArgumentParser(description="Run OCR on images or PDFs")
+        parser.add_argument("--input", required=True, help="Input image or PDF")
+        parser.add_argument("--output", required=True, help="Output text file")
+        opts = parser.parse_args(args)
+    
+        # TODO: replace with your existing OCR logic
+        print(f"Performing OCR on {opts.input} → {opts.output}")
+
+
 if __name__ == "__main__":
     main()

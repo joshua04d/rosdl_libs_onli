@@ -215,5 +215,15 @@ def main():
     except Exception as e:
         print(f"Failed to save cleaned CSV: {e}")
 
+    def main_cli(args):
+        import argparse
+        parser = argparse.ArgumentParser(description="Clean CSV files")
+        parser.add_argument("--input", required=True, help="Input CSV file")
+        parser.add_argument("--output", required=True, help="Output CSV file")
+        opts = parser.parse_args(args)
+    
+        # TODO: replace with your existing CSV cleaning call
+        print(f"Cleaning {opts.input} → {opts.output}")
+
 if __name__ == "__main__":
     main()

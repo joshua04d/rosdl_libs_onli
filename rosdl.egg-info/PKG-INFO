@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: rosdl
+Version: 0.1.0
+Summary: ROS Data Library CLI + Modules
+Author: Your Name
+Requires-Python: >=3.7

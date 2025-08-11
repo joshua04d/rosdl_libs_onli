@@ -141,5 +141,16 @@ def main():
     print("\n--- Top Keywords ---")
     print(keywords)
 
+    def main_cli(args):
+        import argparse
+        parser = argparse.ArgumentParser(description="Text processing utilities")
+        parser.add_argument("--input", required=True, help="Input text file")
+        parser.add_argument("--output", required=True, help="Output text file")
+        parser.add_argument("--operation", required=True, help="clean, tokenize, summarize, etc.")
+        opts = parser.parse_args(args)
+    
+        # TODO: replace with your existing text utility logic
+        print(f"Processing text {opts.input} → {opts.output} (operation={opts.operation})")
+
 if __name__ == '__main__':
     main()

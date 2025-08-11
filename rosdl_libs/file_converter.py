@@ -88,5 +88,16 @@ def main():
             case _:
                 print("Invalid choice. Please enter 1, 2, 3 or 4.")
 
+    def main_cli(args):
+        import argparse
+        parser = argparse.ArgumentParser(description="Convert files between formats")
+        parser.add_argument("--input", required=True, help="Input file path")
+        parser.add_argument("--output", required=True, help="Output file path")
+        parser.add_argument("--format", required=True, help="Output format (e.g., csv, json, parquet)")
+        opts = parser.parse_args(args)
+    
+        # TODO: replace with your existing file conversion logic
+        print(f"Converting {opts.input} → {opts.output} (format={opts.format})")
+
 if __name__ == "__main__":
     main()

@@ -104,6 +104,16 @@ def main():
     else:
         print("Invalid choice!")
 
+    def main_cli(args):
+        import argparse
+        parser = argparse.ArgumentParser(description="Perform EDA & data drift analysis")
+        parser.add_argument("--input", required=True, help="Input dataset file")
+        parser.add_argument("--report", required=True, help="Output report file")
+        opts = parser.parse_args(args)
+    
+        # TODO: replace with your existing EDA/drift logic
+        print(f"Analyzing drift for {opts.input} → Report: {opts.report}")
+
 
 if __name__ == "__main__":
     main()

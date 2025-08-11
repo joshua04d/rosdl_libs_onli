@@ -140,6 +140,16 @@ def check_tesseract_installed():
         print("  brew install tesseract\n")
         sys.exit(1)
 
+    def main_cli(args):
+        import argparse
+        parser = argparse.ArgumentParser(description="PDF processing tools")
+        parser.add_argument("--operation", required=True, help="merge, split, extract-text, etc.")
+        parser.add_argument("--inputs", nargs="+", help="List of input PDF files")
+        parser.add_argument("--output", required=True, help="Output PDF or text file")
+        opts = parser.parse_args(args)
+    
+        # TODO: replace with your existing PDF logic
+        print(f"PDF {opts.operation} on {opts.inputs} → {opts.output}")
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
@@ -197,3 +207,4 @@ if __name__ == "__main__":
 
     else:
         print(f"Unknown command: {cmd}")
+

@@ -290,6 +290,15 @@ def main():
         if metadata_list:
             ask_export(metadata_list)
 
+    def main_cli(args):
+        import argparse
+        parser = argparse.ArgumentParser(description="Extract metadata from files")
+        parser.add_argument("--input", required=True, help="Input file path")
+        parser.add_argument("--output", required=False, help="Output metadata file")
+        opts = parser.parse_args(args)
+    
+        # TODO: replace with your existing metadata extraction logic
+        print(f"Extracting metadata from {opts.input} → {opts.output or 'stdout'}")
 
 if __name__ == "__main__":
     main()
