@@ -1,0 +1,7 @@
+conversion:
+  mode: "xlsx_to_csv"
+  input_file: "aa.xlsx"
+  output_file: "sample.csv"
+  csv:
+    delimiter: ","
+    encoding: "utf-8"
