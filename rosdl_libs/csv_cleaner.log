@@ -1,0 +1,4 @@
+2025-08-18 01:48:04,808 - INFO - Detecting and casting data types...
+2025-08-18 01:48:04,832 - INFO - Column ' Name ' could not be cast to numeric.
+2025-08-18 01:48:04,840 - INFO - Column ' Email Address ' could not be cast to numeric.
+2025-08-18 01:48:04,840 - INFO - Column ' Join Date ' casted to datetime.
